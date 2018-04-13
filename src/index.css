@@ -58,7 +58,8 @@
 }
 
 .quoteDetails {
-  font-size: 20px;
+  font-size: 18px;
+  padding-top: 27px;
   /* padding-top: 27px; */
 }
 
@@ -75,6 +76,16 @@
   color: black;
 }
 
+.lilHeaders {
+  font-size: 20px;
+}
+
 .list {
   color: white;
+  padding-top: 27px;
+}
+
+.listTitle {
+  color: white;
+  font-size: 20px;
 }

@@ -28,7 +28,7 @@ class App extends Component {
       <div className="body">
 
         <div className="navigation">
-          <a className="myName" href="https://www.google.com/" target="_blank"><h2>Welcome to the best dashboard ever</h2></a>
+          <a className="myName" href="https://www.google.com/" target="_blank"><h2>My Dashboard</h2></a>
           <Scrollspy className = 'linksContainer' items={['Blog', 'YouTube', 'FUD Stuff']} currentClassName='scrolled'>
             <div><a className = 'nav-link' href = "https://wordpress.com/" target="_blank">Blog</a></div>
             <div><a className = 'nav-link' href = "https://www.youtube.com/watch?v=uE-1RPDqJAY" target="_blank">YouTube</a></div>
@@ -41,18 +41,18 @@ class App extends Component {
             <div className="row">
 
               <div className="col-md-4 headerItem" id="randomQuote">
-              <h1>Refresh for a new quote!</h1>
+              <h1 className="lilHeaders">Refresh for a new quote!</h1>
                 <Quote/>
               </div>
 
               <div className="col-md-4 headerItem" id="iGreetYou">
-                <h1>Hey Friend!</h1>
+                <h1 className="lilHeaders">Hey Friend!</h1>
                 <p><Time/></p>
                 <img className="quirrell" src={quirrell}/>
               </div>
 
               <div className="col-md-4 headerItem" id="makeMeDoThings">
-                <h1 className="list">What Do You Want To Do Today?:</h1>
+                <h1 className="listTitle">What Do You Want To Do Today?:</h1>
                 <h3 className="list">Just Add It To the List</h3>
                   <List/>
               </div>
@@ -67,6 +67,7 @@ class App extends Component {
             <div><a className = 'nav-link' href = 'https://www.facebook.com' target="_blank">Facebook</a></div>
             <div><a className = 'nav-link' href = 'https://twitter.com' target="_blank">Twitter</a></div>
             <div><a className = 'nav-link' href = 'https://www.linkedin.com/' target="_blank">LinkedIn</a></div>
+            <div><a className = 'nav-link' href = 'https://www.github.com' target='_blank'>GitHub</a></div>
           </Scrollspy>
         </div>
 
