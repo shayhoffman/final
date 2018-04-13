@@ -30,9 +30,9 @@ class App extends Component {
         <div className="navigation">
           <a className="myName" href="https://www.google.com/" target="_blank"><h2>Welcome to the best dashboard ever</h2></a>
           <Scrollspy className = 'linksContainer' items={['Blog', 'YouTube', 'FUD Stuff']} currentClassName='scrolled'>
-            <div><a className = 'nav-link' href = 'https://wordpress.com/' target="_blank">Blog</a></div>
-            <div><a className = 'nav-link' href = 'https://www.youtube.com/watch?v=uE-1RPDqJAY' target="_blank">YouTube</a></div>
-            <div><a className = 'nav-link' href = 'https://www.youtube.com/user/bgfilms' target="_blank">FUD Stuff</a></div>
+            <div><a className = 'nav-link' href = "https://wordpress.com/" target="_blank">Blog</a></div>
+            <div><a className = 'nav-link' href = "https://www.youtube.com/watch?v=uE-1RPDqJAY" target="_blank">YouTube</a></div>
+            <div><a className = 'nav-link' href = "https://www.youtube.com/user/bgfilms" target="_blank">FUD Stuff</a></div>
           </Scrollspy>
         </div>
 
