@@ -30,9 +30,9 @@ class App extends Component {
         <div className="navigation">
           <a className="myName" href="https://www.google.com/" target="_blank"><h2>Welcome to the best dashboard ever</h2></a>
           <Scrollspy className = 'linksContainer' items={['Blog', 'YouTube', 'FUD Stuff']} currentClassName='scrolled'>
-            <div><a className = 'nav-link' href = '#'>Blog</a></div>
-            <div><a className = 'nav-link' href = '#'>YouTube</a></div>
-            <div><a className = 'nav-link' href = '#'>FUD Stuff</a></div>
+            <div><a className = 'nav-link' href = 'https://wordpress.com/' target="_blank">Blog</a></div>
+            <div><a className = 'nav-link' href = 'https://www.youtube.com/watch?v=uE-1RPDqJAY' target="_blank">YouTube</a></div>
+            <div><a className = 'nav-link' href = 'https://www.youtube.com/user/bgfilms' target="_blank">FUD Stuff</a></div>
           </Scrollspy>
         </div>
 
@@ -64,9 +64,9 @@ class App extends Component {
         <div className="navigation">
           <a className="myName" href="https://www.google.com/" target="_blank"><h2>Social Media</h2></a>
           <Scrollspy className = 'linksContainer' items={['Facebook', 'Twitter', 'LinkedIn']} currentClassName='scrolled'>
-            <div><a className = 'nav-link' href = '#'>Facebook</a></div>
-            <div><a className = 'nav-link' href = '#'>Twitter</a></div>
-            <div><a className = 'nav-link' href = '#'>LinkedIn</a></div>
+            <div><a className = 'nav-link' href = 'https://www.facebook.com' target="_blank">Facebook</a></div>
+            <div><a className = 'nav-link' href = 'https://twitter.com' target="_blank">Twitter</a></div>
+            <div><a className = 'nav-link' href = 'https://www.linkedin.com/' target="_blank">LinkedIn</a></div>
           </Scrollspy>
         </div>
 
