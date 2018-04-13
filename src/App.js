@@ -1,64 +1,79 @@
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 
-const portfolioImageList = [
-  {id: 'plane', title: 'UX ATLANTIC', description: 'Booking page for the UX Atlantic Airline', link: 'https://codepen.io/shayhoffman/'},
-  {id: 'trip', title: 'ESRI MAP', description: 'A map made using ESRI Story Map software', link: 'https://www.arcgis.com/apps/MapJournal/index.html?appid=e4b0729b324c4f15914d940f54c217fe'},
-  {id: 'disasters', title: 'ARC GIS MAP', description: 'A map made using national data to determine occurrences of natural disasters', link: 'GISportfolio.pdf'},
-  {id: 'NDVI', title: 'NDVI MAP', description: 'A map made using NDVI data to determine plant growth in Austin, TX', link: 'GISportfolio.pdf'},
-  {id: 'equestrians', title: 'EQUESTRIAN MAP', description: 'A map made using data to determine best cities for Equestrians', link: 'GISportfolio.pdf'},
-  {id: 'writing', title: 'WRITING SAMPLES', description: 'A few samples of my writing', link: 'jewishpaper.pdf'}
-]
+/*image files*/
+import Flower from './Flower.jpg';
+import quirrell from './quirrell.jpeg';
 
-const footerIconList = [
-  {id: 'homeIcon', link: 'https://www.linkedin.com/in/shay-hoffman-89600a151/'},
-  {id: 'githubIcon', link: 'https://github.com/shayhoffman'},
-  {id: 'codepenIcon', link: 'https://codepen.io/shayhoffman/'},
-  {id: 'twitterIcon', link: 'https://twitter.com/ShayHoffman'},
-  {id: 'linkedinIcon', link: 'https://www.linkedin.com/in/shay-hoffman-89600a151/'}
-]
+/*navbar dependency*/
+import Scrollspy from 'react-scrollspy';
+
+/*child components*/
+import {Quote} from './Quote.js';
+import Time from './time.js';
+import List from './toDoList.js';
+import ListItem from './ListItem.js';
+
 
 class App extends Component {
-  state = {
-    portfolioPieces: [],
-    footerIcons: [],
-    items: null,
-    error: null,
+  constructor(props){
+    super(props)
+    this.state = {
+
+    }
   }
 
-  /* add API call here? componentDidMount ? */
+  render(){
+    return(
+      <div className="body">
 
-  render() {
-    return (
-      <div className="portfolio">
-        <NavBar id = 'nav'/>
-        <Header id = 'home'/>
-        <div className = 'otherPieces'>
-          <h2>Portfolio</h2><hr/>
-          <div className = 'myStuff'>
-            {this.state.portfolioPieces.map((obj, key) => {
-              return (
-                <OtherPieces
-                  key = {key}
-                  is = {obj.id}
-                  title = {obj.title}
-                  description = {obj.description}
-                  link = {obj.link}/>); })}
+        <div className="navigation">
+          <a className="myName" href="https://www.google.com/" target="_blank"><h2>Welcome to the best dashboard ever</h2></a>
+          <Scrollspy className = 'linksContainer' items={['About Me', 'Portfolio', 'Inspirational']} currentClassName='scrolled'>
+            <div><a className = 'nav-link' href = '#'>Blog</a></div>
+            <div><a className = 'nav-link' href = '#'>My Faves</a></div>
+            <div><a className = 'nav-link' href = '#'>FUD Stuff</a></div>
+          </Scrollspy>
+        </div>
+
+        <div className="header">
+          <div className="container">
+            <div className="row">
+
+              <div className="col-md-4 headerItem">
+                <Quote/>
+              </div>
+
+              <div className="col-md-4 headerItem" id="iGreetYou">
+                <h1>Hey Friend!</h1>
+                <p><Time/></p>
+                <img className="quirrell" src={quirrell}/>
+              </div>
+
+              <div className="col-md-4 headerItem" id="makeMeDoThings">
+                <h2>Add It To The List:</h2>
+                  <List/>
+              </div>
+
+            </div>
           </div>
         </div>
 
-        <About id = 'about'/>
-
-        <div className = "footer">
-          {this.state.footerIcons.map((icon, key) => {
-            return(
-              <footer
-                key = {key}
-                id = {icon.id}
-                link = {icon.link}/>)})}
+        <div className="navigation">
+          <a className="myName" href="https://www.google.com/" target="_blank"><h2>Welcome</h2></a>
+          <Scrollspy className = 'linksContainer' items={['About Me', 'Portfolio', 'Inspirational']} currentClassName='scrolled'>
+            <div><a className = 'nav-link' href = '#'>Blog</a></div>
+            <div><a className = 'nav-link' href = '#'>My Faves</a></div>
+            <div><a className = 'nav-link' href = '#'>FUD Stuff</a></div>
+          </Scrollspy>
         </div>
+
+        <div className="main">
+        </div>
+
+
       </div>
-    );
+    )
   }
 }
 
