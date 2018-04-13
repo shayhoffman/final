@@ -29,9 +29,9 @@ class App extends Component {
 
         <div className="navigation">
           <a className="myName" href="https://www.google.com/" target="_blank"><h2>Welcome to the best dashboard ever</h2></a>
-          <Scrollspy className = 'linksContainer' items={['About Me', 'Portfolio', 'Inspirational']} currentClassName='scrolled'>
+          <Scrollspy className = 'linksContainer' items={['Blog', 'YouTube', 'FUD Stuff']} currentClassName='scrolled'>
             <div><a className = 'nav-link' href = '#'>Blog</a></div>
-            <div><a className = 'nav-link' href = '#'>My Faves</a></div>
+            <div><a className = 'nav-link' href = '#'>YouTube</a></div>
             <div><a className = 'nav-link' href = '#'>FUD Stuff</a></div>
           </Scrollspy>
         </div>
@@ -40,7 +40,8 @@ class App extends Component {
           <div className="container">
             <div className="row">
 
-              <div className="col-md-4 headerItem">
+              <div className="col-md-4 headerItem" id="randomQuote">
+              <h1>Refresh for a new quote!</h1>
                 <Quote/>
               </div>
 
@@ -51,7 +52,8 @@ class App extends Component {
               </div>
 
               <div className="col-md-4 headerItem" id="makeMeDoThings">
-                <h2>Add It To The List:</h2>
+                <h1 className="list">What Do You Want To Do Today?:</h1>
+                <h3 className="list">Just Add It To the List</h3>
                   <List/>
               </div>
 
@@ -60,11 +62,11 @@ class App extends Component {
         </div>
 
         <div className="navigation">
-          <a className="myName" href="https://www.google.com/" target="_blank"><h2>Welcome</h2></a>
-          <Scrollspy className = 'linksContainer' items={['About Me', 'Portfolio', 'Inspirational']} currentClassName='scrolled'>
-            <div><a className = 'nav-link' href = '#'>Blog</a></div>
-            <div><a className = 'nav-link' href = '#'>My Faves</a></div>
-            <div><a className = 'nav-link' href = '#'>FUD Stuff</a></div>
+          <a className="myName" href="https://www.google.com/" target="_blank"><h2>Social Media</h2></a>
+          <Scrollspy className = 'linksContainer' items={['Facebook', 'Twitter', 'LinkedIn']} currentClassName='scrolled'>
+            <div><a className = 'nav-link' href = '#'>Facebook</a></div>
+            <div><a className = 'nav-link' href = '#'>Twitter</a></div>
+            <div><a className = 'nav-link' href = '#'>LinkedIn</a></div>
           </Scrollspy>
         </div>
 
